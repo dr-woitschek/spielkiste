@@ -3,7 +3,7 @@
 ###### .DESCRIPTION
    Der Funktionsaufruf muss mit dem Parameter -Name und -ValidateSet aufgerufen werden.
 ###### .EXAMPLE
-   #
+   ```
    function Test-Rob
     {
      [CmdletBinding()]
@@ -30,7 +30,9 @@
     };
    #
    Test-Rob -Value <Tab>
+   ```
 ###### .EXAMPLE
+   ```
    ...
    DynamicParam
     {
@@ -45,6 +47,7 @@
      $Laufwerk = $PSBoundParameters.Laufwerk;
     }
    ...
+   ```
 ###### .PARAMETER Name
    Namen eingeben
 ###### .PARAMETER Type
