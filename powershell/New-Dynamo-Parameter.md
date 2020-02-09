@@ -86,8 +86,8 @@ etc.
 ###### .OUTPUTS
 > Dynamischer Parameter
 ###### .NOTES
- | 
--------- | ------------
-Version | 0.1
-Creation Date | 06.02.2020
-Author | Robert
+```
+Version: 0.1
+Creation Date: 06.02.2020
+Author: Robert
+```
