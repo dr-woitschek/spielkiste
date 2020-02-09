@@ -1,8 +1,8 @@
-.Synopsis
+###### .Synopsis
    Erstellen eines dynamischen Parameters für Funktionen
-.DESCRIPTION
+###### .DESCRIPTION
    Der Funktionsaufruf muss mit dem Parameter -Name und -ValidateSet aufgerufen werden.
-.EXAMPLE
+###### .EXAMPLE
    #
    function Test-Rob
     {
@@ -30,7 +30,7 @@
     };
    #
    Test-Rob -Value <Tab>
-.EXAMPLE
+###### .EXAMPLE
    ...
    DynamicParam
     {
@@ -45,9 +45,9 @@
      $Laufwerk = $PSBoundParameters.Laufwerk;
     }
    ...
-.PARAMETER Name
+###### .PARAMETER Name
    Namen eingeben
-.PARAMETER Type
+###### .PARAMETER Type
    Type der Variable festlegen
     [int]
     [long]
@@ -62,27 +62,27 @@
     [array]
     [hashtable]
     etc.
-.PARAMETER Alias
+###### .PARAMETER Alias
    Legt einen alternativen Namen für den Parameter fest
-.PARAMETER ValidateSet
+###### .PARAMETER ValidateSet
    Legt fest, welche exakten Werte (Case insensitiv) ein Argument annehmen darf
-.PARAMETER Mandatory
+###### .PARAMETER Mandatory
    Legt fest, der der Parameter NICHT optional ist
-.PARAMETER ParameterSetName
+###### .PARAMETER ParameterSetName
    Legt fest, ob eine Parametergruppe angelegt werden soll
-.PARAMETER Position
+###### .PARAMETER Position
    Legt fest, welche Position der Parameter haben soll
-.PARAMETER ValueFromPipelineByPropertyName
+###### .PARAMETER ValueFromPipelineByPropertyName
    Enthält das eintreffende Objekt eine Eigenschaft vom passenden Datentyp und heißt
    die Eigenschaft so wie der Parameter, wird der Inhalt dieser Eigenschaft an den
    Parameter gebunden.
-.PARAMETER HelpMessage
+###### .PARAMETER HelpMessage
    Angabe eines Hilfetextes zum Parameter
-.INPUTS
+###### .INPUTS
    Neues-Dynamo -Name <Name> -ValidateSet <ValidateSet>
-.OUTPUTS
+###### .OUTPUTS
    Dynamischer Parameter
-.NOTES
+###### .NOTES
    Version:        0.1
    Creation Date:  06.02.2020
    Author:         Robert

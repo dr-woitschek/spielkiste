@@ -12,6 +12,7 @@ meine PowerShell Spielkiste xD
 ### PowerShell Debug Varianten:
 
 > [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/debugging-Set-PSDebug.md)
+
 > [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/debugging-DebugPreference.md)
 
 ---
