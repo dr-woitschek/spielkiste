@@ -8,7 +8,7 @@
 ### PowerShell Debug Varianten:
 
 > Set-PSDebug -Trace <int>;
-#### ![Set-PSDebug](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Set-PSDebug.md)
+#### [Set-PSDebug](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Set-PSDebug.md)
 
 Aktiviert bzw. deaktiviert Skript-Debuggingfunktionen, legt die Ablaufverfolgungsebene fest und schaltet den Strict-Modus um.
 * Gibt die Ablaufverfolgungsebene an:
