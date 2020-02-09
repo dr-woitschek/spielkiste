@@ -7,16 +7,15 @@
 
 ## PowerShell Debug Varianten
 
-`Set-PSDebug -Trace <int>;`
+> `Set-PSDebug -Trace <int>;`
 
 Aktiviert bzw. deaktiviert Skript-Debuggingfunktionen, legt die Ablaufverfolgungsebene fest und schaltet den Strict-Modus um.
-* -Trace <int>
 * Gibt die Ablaufverfolgungsebene an:
   * 0 - Skriptablaufverfolgung deaktivieren
   * 1 - Skriptzeilen beim Ausführen verfolgen
   * 2 - Skriptzeilen, Variablenzuweisungen, Funktionsaufrufe und Skripts verfolgen
 
-`$DebugPreference;`
+> `$DebugPreference;`
 
 * Write-Debug wird ignoriert (Normalfall).
   * `$DebugPreference = 'SilentlyContinue';`
