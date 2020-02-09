@@ -23,31 +23,51 @@ HelpMessage = 'Hilfe Text'
 ```
 ---
 ##### Legt fest, dass das Argument weder Null noch leer sein darf
-```[ValidateNotNullOrEmpty()]```
+```
+[ValidateNotNullOrEmpty()]
+```
 ---
 ##### Legt fest, dass der Wert des Argumentes nicht Null sein darf
-```[ValidateNotNull()]```
+```
+[ValidateNotNull()]
+```
 ---
 ##### Definiert für einen nicht optionalen Parameter die minimale und die maximale Anzahl von Argumenten, welche an den Parameter gebunden werden können
-```[ValidateCount(0,1)]```
+```
+[ValidateCount(0,1)]
+```
 ---
 ##### Definiert für einen nicht optionalen Parameter die minimale und die maximale Stringlänge
-```[ValidateLength(4,5)]```
+```
+[ValidateLength(4,5)]
+```
 ---
 ##### Legt fest, welche exakten Werte (Case insensitiv) ein Argument annehmen darf
-```[ValidateSet('Vorgabe_A' , 'Vorgabe_A')]```
+```
+[ValidateSet('Vorgabe_A' , 'Vorgabe_A')]
+```
 ---
 ##### Definiert ein Skriptblock zur Validierung des Argumentes. Es wird ein Fehler generiert, wenn das Ergebnis nicht $True ist oder wenn der Code einen Laufzeitfehler erzeugt. Die automatische Variable $_ steht für das übergebene Argument
-```[ValidateScript( { $_ -lt 4 } )]```
+```
+[ValidateScript( { $_ -lt 4 } )]
+```
 ---
 ##### Legt die Unter- und Obergrenze für das Argument fest
-```[ValidateRange(0,10)]```
+```
+[ValidateRange(0,10)]
+```
 ---
 ##### Definiert mit Hilfe einer Regular Expression ein Muster, dem das Argument entsprechen muss
-```[ValidatePattern('[0-9][0-9][0-9]')]```
+```
+[ValidatePattern('[0-9][0-9][0-9]')]
+```
 ---
 ##### Legt einen alternativen Namen für den Parameter fest
-```[Alias('AndererName')]```
+```
+[Alias('AndererName')]
+```
 ---
 ##### Parameter-Name
-```[String]$Variabe```
+```
+[String]$Variabe
+```
