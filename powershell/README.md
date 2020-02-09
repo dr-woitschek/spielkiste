@@ -31,4 +31,28 @@ Aktiviert bzw. deaktiviert Skript-Debuggingfunktionen, legt die Ablaufverfolgung
 
 ### PowerShell Funktionen
 #### CmdletBinding()
+
+```
+[CmdletBinding()]
+SupportsShouldProcess = $True
+```
+Simulationsmodus (-WhatIf) und Sicherheitsabfrage (-Confirm) aktivieren
+
+```
+[CmdletBinding()]
+HelpUri = 'https://www.google.de/'
+```
+Get-Help <function> -Online;
+
+```
+[CmdletBinding()]
+ConfirmImpact = 'High'
+```
+Gefährlichkeit einer Funktion festlegen/Risiko-Level
+* High   ... Sehr gefährlich
+* Medium ... Durchschnittlich
+* Low    ... Ungefährlich
+* None   ... keine Informationen angegeben
+> Parameter -Confirm:$False bzw. -Confirm:$True in kombination mit $PSCmdlet.ShouldProcess...
+
 #### Param()
