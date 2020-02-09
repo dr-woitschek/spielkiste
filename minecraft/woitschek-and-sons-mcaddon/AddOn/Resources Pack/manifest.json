@@ -1,0 +1,30 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "§l§5Resources Pack §l§f0.0.1 §l§5xD",
+        "name": "§l§5Dr§l§f. §l§5Woitschek §l§fRES",
+        "uuid": "6fbea5b1-4f5c-4e12-a6d1-31dd6d2a60dd",
+        "version": [0, 0, 1],
+        "min_engine_version": [1, 8, 0]
+    },
+    "modules": [
+        {
+            "description": "Minecraft mal anders xD",
+            "type": "resources",
+            "uuid": "790627cb-a15e-46df-99b7-0fb1afbf2c94",
+            "version": [0, 0, 1]
+        }
+    ],
+    "subpacks": [
+        {
+            "folder_name": "no_icon",
+            "name": "No Icon Text",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "has_icon",
+            "name": "Has Icon Text",
+            "memory_tier": 1
+        }
+    ]
+}
