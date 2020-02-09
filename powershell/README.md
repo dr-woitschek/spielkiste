@@ -7,11 +7,9 @@
 ---
 ### PowerShell Debug Varianten:
 
-> Set-PSDebug -Trace <int>;
-#### [Set-PSDebug](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Set-PSDebug.md)
+> [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Set-PSDebug.md)
 
-> $DebugPreference;
-#### [DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/DebugPreference.md)
+> [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/DebugPreference.md)
 
 ---
 ### PowerShell Funktionen
