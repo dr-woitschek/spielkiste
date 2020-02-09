@@ -6,7 +6,7 @@
 
 ---
 
-## [Woitschek and Sons MCAddon-World](https://github.com/dr-woitschek/spielkiste/tree/master/minecraft/find-village-center/)
+## [Woitschek and Sons MCAddon-World](https://github.com/dr-woitschek/spielkiste/tree/master/minecraft/woitschek-and-sons-mcaddon-world/)
 
 > `.\Zusammenbauen.ps1 [<CommonParameters>]`
 
