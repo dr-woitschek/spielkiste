@@ -3,11 +3,11 @@
 ## Debug
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
-### ![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debug-Info_PowerShell-Output.jpg)
+#### ![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debug-Info_PowerShell-Output.jpg)
 
-## PowerShell Debug Varianten
+### PowerShell Debug Varianten:
 
-> `Set-PSDebug -Trace <int>;`
+> Set-PSDebug -Trace <int>;
 
 Aktiviert bzw. deaktiviert Skript-Debuggingfunktionen, legt die Ablaufverfolgungsebene fest und schaltet den Strict-Modus um.
 * Gibt die Ablaufverfolgungsebene an:
@@ -15,7 +15,7 @@ Aktiviert bzw. deaktiviert Skript-Debuggingfunktionen, legt die Ablaufverfolgung
   * 1 - Skriptzeilen beim Ausführen verfolgen
   * 2 - Skriptzeilen, Variablenzuweisungen, Funktionsaufrufe und Skripts verfolgen
 
-> `$DebugPreference;`
+> $DebugPreference;
 
 * Write-Debug wird ignoriert (Normalfall).
   * `$DebugPreference = 'SilentlyContinue';`
@@ -28,3 +28,7 @@ Aktiviert bzw. deaktiviert Skript-Debuggingfunktionen, legt die Ablaufverfolgung
 
 * Write-Debug wird zu einem Haltepunkt.
   * `$DebugPreference = 'Inquire';`
+
+### PowerShell Funktionen
+#### CmdletBinding()
+#### Param()
