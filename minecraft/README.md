@@ -14,5 +14,8 @@ Der Funktionsaufruf muss mit den Koordinaten
 ### Die Koordinaten können aus dem NBT Editor ausgelesen werden.
 Als Ergebnis wird der Dorfmittelpunkt zurückgegeben.
 
+![Screenshot Universal Minecraft Editor](https://github.com/dr-woitschek/spielkiste/blob/master/minecraft/find-village-center_NBT-Informationen.jpg)
 ###### Screenshot aus dem Universal Minecraft Editor
-![Screenshot](https://github.com/dr-woitschek/spielkiste/blob/master/minecraft/find-village-center_NBT-Informationen.jpg)
+
+![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/minecraft/find-village-center_PowerShell-Output.jpg)
+###### Screenshot PowerShell Ausgabe
