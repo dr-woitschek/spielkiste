@@ -4,7 +4,7 @@
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
 #### ![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debug-Info_PowerShell-Output.jpg)
-
+---
 ### PowerShell Debug Varianten:
 
 > Set-PSDebug -Trace <int>;
@@ -28,7 +28,7 @@ Aktiviert bzw. deaktiviert Skript-Debuggingfunktionen, legt die Ablaufverfolgung
 
 * Write-Debug wird zu einem Haltepunkt.
   * `$DebugPreference = 'Inquire';`
-
+---
 ### PowerShell Funktionen
 #### CmdletBinding()
 
@@ -37,13 +37,13 @@ Aktiviert bzw. deaktiviert Skript-Debuggingfunktionen, legt die Ablaufverfolgung
 [CmdletBinding()]
 SupportsShouldProcess = $True
 ```
-
+---
 ##### Get-Help <function> -Online;
 ```
 [CmdletBinding()]
 HelpUri = 'https://www.google.de/'
 ```
-
+---
 ##### Gefährlichkeit einer Funktion festlegen/Risiko-Level
 * High   ... Sehr gefährlich
 * Medium ... Durchschnittlich
@@ -54,5 +54,5 @@ HelpUri = 'https://www.google.de/'
 [CmdletBinding()]
 ConfirmImpact = 'High'
 ```
-
+---
 #### Param()
