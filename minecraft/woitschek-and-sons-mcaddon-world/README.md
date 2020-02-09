@@ -1,6 +1,6 @@
 # Minecraft Bedrock Edition
 
-## MCAddon/World
+## Woitschek and Sons MCAddon-World
 
 > `.\Zusammenbauen.ps1 [<CommonParameters>]`
 
