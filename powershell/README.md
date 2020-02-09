@@ -1,5 +1,7 @@
 # Powershell Script Sammlung
 
+meine PowerShell Spielkiste xD
+
 ## Debug Funktion
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
