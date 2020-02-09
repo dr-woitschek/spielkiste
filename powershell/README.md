@@ -2,28 +2,37 @@
 
 meine PowerShell Spielkiste xD
 
-## Debug Funktion
+### Debug Funktion
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
 #### ![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debug-Info_PowerShell-Output.jpg)
+
 ---
+
 ### PowerShell Debug Varianten:
 
 > [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/debugging-Set-PSDebug.md)
-
 > [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/debugging-DebugPreference.md)
 
 ---
+
+### New-Dynamo-Parameter
+> [New-Dynamo-Parameter](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/New-Dynamo-Parameter.md)
+
+---
+
 ### PowerShell Funktionen
 #### CmdletBinding()
 > [CmdletBinding Beispiele](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Function-CmdletBinding.md)
+
+---
 
 #### Param()
 > [Param Beispiele](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Function-Param.md)
 
 ---
-### PowerShell Variablen
 
+### PowerShell Variablen
 Variable | Beschreibung
 -------- | ------------
 [int]$var       | 32-bit integer mit Vorzeichen
@@ -40,8 +49,8 @@ Variable | Beschreibung
 [hashtable]$var | Hashtabelle
 
 ---
-### PowerShell Vergleichsoperatoren
 
+### PowerShell Vergleichsoperatoren
 Operator | Beschreibung
 -------- | ------------
 -eq | gleich
