@@ -5,6 +5,8 @@
 `.\Debug-Info.ps1 [<CommonParameters>]`
 ### ![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debug-Info_PowerShell-Output.jpg)
 
+## PowerShell Debug Varianten
+
 `Set-PSDebug -Trace <int>;`
 ```
  Aktiviert bzw. deaktiviert Skript-Debuggingfunktionen,
