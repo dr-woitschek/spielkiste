@@ -1,4 +1,15 @@
 # Minecraft Bedrock Edition
+
 ## [Berechnen des Dorf-Zentrums](https://github.com/dr-woitschek/spielkiste/tree/master/minecraft/find-village-center/)
 
-`.\find-village-center.ps1 [<CommonParameters>]`
+> `.\find-village-center.ps1 [<CommonParameters>]`
+
+---
+
+## Ordner-Informationen
+
+> Verhaltenspakete (behavior_packs)
+`C:\Users\%Username%\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\behavior_packs`
+
+> Ressourcenpakete (resource_packs)
+`C:\Users\%Username%\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs`
