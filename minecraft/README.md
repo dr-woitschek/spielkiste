@@ -1,5 +1,5 @@
 # minecraft bedrock edition
-`.\find-village-center.ps1 -NBT_coordinate_X0 -769 -NBT_coordinate_X1 -705 -NBT_coordinate_Y0 53 -NBT_coordinate_Y1 77 -NBT_coordinate_Z0 40 -NBT_coordinate_Z1 119`
+`.\find-village-center.ps1 [<CommonParameters>]`
 
 ## Minecraft Bedrock Edition
 ### Berechnen des Dorf-Zentrums.
@@ -14,5 +14,5 @@ Der Funktionsaufruf muss mit den Koordinaten
 ### Die Koordinaten können aus dem NBT Editor ausgelesen werden.
 Als Ergebnis wird der Dorfmittelpunkt zurückgegeben.
 
-####### Screenshot aus dem Universal Minecraft Editor
-[![Screenshot](https://github.com/dr-woitschek/spielkiste/blob/master/minecraft/find-village-center_NBT-Informationen.jpg)
+###### Screenshot aus dem Universal Minecraft Editor
+![Screenshot](https://github.com/dr-woitschek/spielkiste/blob/master/minecraft/find-village-center_NBT-Informationen.jpg)
