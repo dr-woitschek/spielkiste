@@ -5,15 +5,16 @@ meine PowerShell Spielkiste xD
 ### Meine Debug Funktion
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
+
 [Debugging](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/)
 
 ---
 
 ### PowerShell Debug Varianten:
 
-> [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/README.md)
+> [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-Set-PSDebug.md)
 
-> [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/README.md)
+> [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-DebugPreference.md)
 
 ---
 
