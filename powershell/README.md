@@ -5,20 +5,20 @@ meine PowerShell Spielkiste xD
 ### Debug Funktion
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
-#### ![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debug-Info_PowerShell-Output.jpg)
+#### ![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/Debug-Info_PowerShell-Output.jpg)
 
 ---
 
 ### PowerShell Debug Varianten:
 
-> [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/debugging-Set-PSDebug.md)
+> [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-Set-PSDebug.md)
 
-> [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/debugging-DebugPreference.md)
+> [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-DebugPreference.md)
 
 ---
 
 ### New-Dynamo-Parameter
-> [New-Dynamo-Parameter](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/New-Dynamo-Parameter.md)
+> [New-Dynamo-Parameter](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Dynamische-Parameter/New-Dynamo-Parameter.md)
 
 ---
 
