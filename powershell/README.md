@@ -2,9 +2,10 @@
 
 meine PowerShell Spielkiste xD
 
-### Debug Funktion
+### Meine Debug Funktion
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
+[Debugging](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/)
 
 ---
 

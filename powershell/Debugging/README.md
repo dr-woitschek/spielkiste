@@ -1,5 +1,5 @@
 
-### Debug Funktion
+### Meine Debug Funktion
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
 #### ![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/Debug-Info_PowerShell-Output.jpg)
