@@ -6,7 +6,7 @@ meine PowerShell Spielkiste xD
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
 
-[Debugging](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/)
+> [Debugging](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/)
 
 ---
 
