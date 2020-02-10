@@ -5,13 +5,12 @@ meine PowerShell Spielkiste xD
 ### Debug Funktion
 
 `.\Debug-Info.ps1 [<CommonParameters>]`
-#### ![Screenshot PowerShell Ausgabe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/Debug-Info_PowerShell-Output.jpg)
 
 ---
 
 ### PowerShell Debug Varianten:
 
-> [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-Set-PSDebug.md)
+> [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/README.md)
 
 > [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/README.md)
 
