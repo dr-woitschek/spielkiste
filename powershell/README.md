@@ -13,12 +13,12 @@ meine PowerShell Spielkiste xD
 
 > [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-Set-PSDebug.md)
 
-> [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-DebugPreference.md)
+> [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/README.md)
 
 ---
 
 ### New-Dynamo-Parameter
-> [New-Dynamo-Parameter](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Dynamische-Parameter/New-Dynamo-Parameter.md)
+> [New-Dynamo-Parameter](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Dynamische-Parameter/README.md)
 
 ---
 
