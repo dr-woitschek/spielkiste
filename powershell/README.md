@@ -25,12 +25,12 @@ meine PowerShell Spielkiste xD
 
 ### PowerShell Funktionen
 #### CmdletBinding()
-> [CmdletBinding Beispiele](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Function-CmdletBinding.md)
+> [CmdletBinding Beispiele](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Funktionshilfe/Function-CmdletBinding.md)
 
 ---
 
 #### Param()
-> [Param Beispiele](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Function-Param.md)
+> [Param Beispiele](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Funktionshilfe/Function-Param.md)
 
 ---
 
