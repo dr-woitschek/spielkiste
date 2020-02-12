@@ -40,12 +40,53 @@
 
 #### -------------------------- BEISPIEL 1 --------------------------
 
+    [String]$meinPath  = $('HKLM:\SOFTWARE');
+    [String]$meinName  = $('IchBinEinTest');
+    [String]$meinType  = $('Binary');
+    [Char[]]$meinValue = $('Binary Value');
+	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
 
-    `[String]$meinPath  = $('HKLM:\SOFTWARE');`
-    `[String]$meinName  = $('IchBinEinTest');`
-    `[String]$meinType  = $('Binary');`
-    `[Char[]]$meinValue = $('Binary Value');`
+#### -------------------------- BEISPIEL 2 --------------------------
+	[String]$meinPath  = $('HKLM:\SOFTWARE\Schlüssel\Unterschlüssel\und\Force');
+	[String]$meinName  = $('IchBinEinTest');
+	[String]$meinType  = $('Binary');
+	[Char[]]$meinValue = $('Binary Value');
+	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue -Force;
 
-	`New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;`
+#### -------------------------- BEISPIEL 3 --------------------------
+	[String]$meinPath  = $('HKLM:\SOFTWARE');
+    [String]$meinName  = $('IchBinEinTest');
+    [String]$meinType  = $('DWord');
+    [String]$meinValue = $('1234567890'); # Dezimal-Wert
+     oder
+    [String]$meinValue = $('0xffffffff'); # Hex-Wert
+	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
+
+#### -------------------------- BEISPIEL 4 --------------------------
+	[String]$meinPath  = $('HKLM:\SOFTWARE');
+    [String]$meinName  = $('IchBinEinTest');
+    [String]$meinType  = $('ExpandString');
+    [String]$meinValue = $('AAAABBBBCCCC');
+     oder
+    [Array]$meinValue  = @('A' , 'B', 'C');
+	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
+
+#### -------------------------- BEISPIEL 5 --------------------------
+    [String]$meinPath  = $('HKLM:\SOFTWARE');
+    [String]$meinName  = $('IchBinEinTest');
+    [String]$meinType  = $('MultiString');
+    [String]$meinValue = $('AAAABBBBCCCC');
+     oder
+    [Array]$meinValue  = @('A' , 'B', 'C');
+	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
+
+#### -------------------------- BEISPIEL 6 --------------------------
+    [String]$meinPath  = $('HKLM:\SOFTWARE');
+    [String]$meinName  = $('IchBinEinTest');
+    [String]$meinType  = $('MultiString');
+    [String]$meinValue = $('1234567890'); # Dezimal-Wert
+     oder
+    [String]$meinValue = $('0xffffffff'); # Hex-Wert
+	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
 
 ---
