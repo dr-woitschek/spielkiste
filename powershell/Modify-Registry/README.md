@@ -13,7 +13,14 @@
     Spass mit der PowerShell
 
 #### SYNTAX
-	New-ItemProperty-V2 [-Path] <String> [-Name] <String> [-Type] <String> [-Value] <Object> [[-Force]] [-WhatIf] [-Confirm] [<CommonParameters>]
+	New-ItemProperty-V2 [-Path] <String>
+	                    [-Name] <String>
+						[-Type] <String>
+						[-Value] <Object>
+						[[-Force]]
+						[-WhatIf]
+						[-Confirm]
+						[<CommonParameters>]
     
 #### BESCHREIBUNG
 	Neue Werte in die Registry schreiben.
