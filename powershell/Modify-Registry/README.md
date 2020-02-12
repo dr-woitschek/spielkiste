@@ -4,6 +4,8 @@
 
 `.\New-ItemProperty-V2.ps1 [<CommonParameters>]`
 
+---
+
 `Get-Help New-ItemProperty-V2 -Detailed`
 
 #### NAME
@@ -38,13 +40,12 @@
 
 #### -------------------------- BEISPIEL 1 --------------------------
 
-	```
-    [String]$meinPath  = $('HKLM:\SOFTWARE');
-    [String]$meinName  = $('IchBinEinTest');
-    [String]$meinType  = $('Binary');
-    [Char[]]$meinValue = $('Binary Value');
 
-	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
-	```
+    `[String]$meinPath  = $('HKLM:\SOFTWARE');`
+    `[String]$meinName  = $('IchBinEinTest');`
+    `[String]$meinType  = $('Binary');`
+    `[Char[]]$meinValue = $('Binary Value');`
+
+	`New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;`
 
 ---
