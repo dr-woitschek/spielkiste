@@ -3,14 +3,15 @@
 #Requires -RunAsAdministrator
 #Requires -Version 5.0
 #
-function New-RegistryItem
+function New-ItemProperty-V2
  {
   #
  <#
   .Synopsis
      Spass mit der PowerShell
   .DESCRIPTION
-     Neue Werte in die Registry schreiben
+     Neue Werte in die Registry schreiben.
+     Mit dem Parameter -Force wird auch der entsprechende Schlüssel\Unterschlüssel angelegt.
   .EXAMPLE
      #
      Binary
@@ -19,7 +20,16 @@ function New-RegistryItem
       [String]$meinType  = $('Binary');
       [Char[]]$meinValue = $('Binary Value');
 
-      New-RegistryItem -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
+      New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
+  .EXAMPLE
+     #
+     Binary
+      [String]$meinPath  = $('HKLM:\SOFTWARE\Schlüssel\Unterschlüssel\und\Force');
+      [String]$meinName  = $('IchBinEinTest');
+      [String]$meinType  = $('Binary');
+      [Char[]]$meinValue = $('Binary Value');
+
+      New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue -Force;
   .EXAMPLE
      #
      DWord
@@ -30,7 +40,7 @@ function New-RegistryItem
        # oder
       [String]$meinValue = $('0xffffffff'); # Hex-Wert
 
-      New-RegistryItem -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
+      New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
   .EXAMPLE
      #
      ExpandString
@@ -41,7 +51,7 @@ function New-RegistryItem
        # oder
       [Array]$meinValue  = @('A' , 'B', 'C');
 
-      New-RegistryItem -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
+      New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
   .EXAMPLE
      #
      MultiString
@@ -52,7 +62,7 @@ function New-RegistryItem
        # oder
       [Array]$meinValue  = @('A' , 'B', 'C');
 
-      New-RegistryItem -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
+      New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
   .EXAMPLE
      #
      QWord
@@ -63,7 +73,7 @@ function New-RegistryItem
        # oder
       [String]$meinValue = $('0xffffffff'); # Hex-Wert
 
-      New-RegistryItem -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
+      New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
   .PARAMETER Path
      Path definiert den Hive\Schlüsselname\Unterschlüsselname
   .PARAMETER Name
@@ -85,15 +95,15 @@ function New-RegistryItem
   .OUTPUTS
      Return <$True> / <$False>
   .NOTES
-     Version:        0.2
+     Version:        0.3
      Creation Date:  10.02.2020
      Author:         Phillip und Robert
   .LINK
-     1. http://www.gidf.de/
+     1. https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Modify-Registry
   #>
   #
   [CmdletBinding(SupportsShouldProcess = $True,
-                 HelpUri               = 'https://www.gidf.de/',
+                 HelpUri               = 'https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Modify-Registry',
                  ConfirmImpact         = 'High')]
   Param(
    [Parameter(Mandatory         = $True,
@@ -183,6 +193,53 @@ function New-RegistryItem
       if($Force)
        {
         #
+        try
+         {
+          #
+          New-Item -Confirm:$False      `
+                   -Path $Path          `
+                   -ErrorAction Stop    `
+                   -Force               `
+                   @AddOn               | Out-Null;
+          #
+         }
+        catch
+         {
+          #
+          if($_.InvocationInfo.ScriptLineNumber)
+           {
+            #
+            [String]$ScriptLineNumber = $('[Line: '+$_.InvocationInfo.ScriptLineNumber+']');
+            #
+           };
+          #
+          if($_.CategoryInfo.Category)
+           {
+            #
+            [String]$Category = $(' '+$_.CategoryInfo.Category);
+            #
+           };
+          #
+          if($_.Exception.Message)
+           {
+            #
+            [String]$Message = $("`n"+' - Message: '+$_.Exception.Message);
+            #
+           };
+          #
+          if($_.TargetObject)
+           {
+            #
+            [String]$TargetObject = $("`n"+' - TargetObject: '+$_.TargetObject);
+            #
+           };
+          #
+          Write-Host -ForegroundColor Red -Object $($ScriptLineNumber+$Category+$Message+$TargetObject+"`n");
+          #
+          Return $False;
+          #
+         };
+        #
         New-ItemProperty -Confirm:$False      `
                          -Path $Path          `
                          -Name $Name          `
@@ -215,7 +272,7 @@ function New-RegistryItem
       if($_.InvocationInfo.ScriptLineNumber)
        {
         #
-        [String]$ScriptLineNumber = $('[Line:'+$_.InvocationInfo.ScriptLineNumber+']');
+        [String]$ScriptLineNumber = $('[Line: '+$_.InvocationInfo.ScriptLineNumber+']');
         #
        };
       #
@@ -290,5 +347,5 @@ function New-RegistryItem
   #
  };
 #
-Get-Help New-RegistryItem -Full;
+Get-Help New-ItemProperty-V2 -Full;
 #

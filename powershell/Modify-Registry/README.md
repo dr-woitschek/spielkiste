@@ -1,7 +1,7 @@
 # Modify-Registry
 
-## Meine New-RegistryItem Funktion
+## Meine New-ItemProperty-V2 Funktion
 
-`.\New-RegistryItem.ps1 [<CommonParameters>]`
+`.\New-ItemProperty-V2.ps1 [<CommonParameters>]`
 
 ---

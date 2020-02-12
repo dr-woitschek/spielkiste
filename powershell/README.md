@@ -19,7 +19,12 @@ meine PowerShell Spielkiste xD
 ---
 
 ### New-Dynamo-Parameter
-> [New-Dynamo-Parameter](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Dynamische-Parameter/README.md)
+> [New-Dynamo-Parameter](https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Dynamische-Parameter)
+
+---
+
+### New-ItemProperty-V2
+> [New-ItemProperty-V2](https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Modify-Registry)
 
 ---
 
@@ -28,7 +33,7 @@ meine PowerShell Spielkiste xD
 - CmdletBinding()
 - Param()
 
-> [Funktionshilfe](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Funktionshilfe/README.md)
+> [Funktionshilfe](https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Funktionshilfe)
 
 ---
 
