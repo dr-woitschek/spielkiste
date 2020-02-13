@@ -179,7 +179,6 @@ function New-ItemProperty-V2
       #
       Write-Host -Object $('Variablen:');
       $PSBoundParameters.GetEnumerator();
-      '---';
       #
      };
     #
@@ -319,8 +318,6 @@ function New-ItemProperty-V2
                         'Name'              ,
                         'Type'              ,
                         'Value'             ,
-                        #
-                        'TypeTmp'           ,
                         #
                         'AddOn'             ,
                         #
