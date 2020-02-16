@@ -2,11 +2,11 @@
 
 ## Meine New-ItemProperty-V2 Funktion
 
-`.\New-ItemProperty-V2.ps1 [<CommonParameters>]`
+`New-ItemProperty-V2 [<CommonParameters>]`
 
 ---
 
-`Get-Help New-ItemProperty-V2 -Detailed`
+`Get-Help New-ItemProperty-V2 -Full`
 
 #### NAME
     New-ItemProperty-V2
@@ -47,6 +47,7 @@
 	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
 
 #### -------------------------- BEISPIEL 2 --------------------------
+
 	[String]$meinPath  = $('HKLM:\SOFTWARE\Schlüssel\Unterschlüssel\und\Force');
 	[String]$meinName  = $('IchBinEinTest');
 	[String]$meinType  = $('Binary');
@@ -54,6 +55,7 @@
 	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue -Force;
 
 #### -------------------------- BEISPIEL 3 --------------------------
+
 	[String]$meinPath  = $('HKLM:\SOFTWARE');
     [String]$meinName  = $('IchBinEinTest');
     [String]$meinType  = $('DWord');
@@ -63,6 +65,7 @@
 	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
 
 #### -------------------------- BEISPIEL 4 --------------------------
+
 	[String]$meinPath  = $('HKLM:\SOFTWARE');
     [String]$meinName  = $('IchBinEinTest');
     [String]$meinType  = $('ExpandString');
@@ -72,6 +75,7 @@
 	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
 
 #### -------------------------- BEISPIEL 5 --------------------------
+
     [String]$meinPath  = $('HKLM:\SOFTWARE');
     [String]$meinName  = $('IchBinEinTest');
     [String]$meinType  = $('MultiString');
@@ -81,6 +85,7 @@
 	New-ItemProperty-V2 -Path $meinPath -Name $meinName -Type $meinType -Value $meinValue;
 
 #### -------------------------- BEISPIEL 6 --------------------------
+
     [String]$meinPath  = $('HKLM:\SOFTWARE');
     [String]$meinName  = $('IchBinEinTest');
     [String]$meinType  = $('MultiString');
