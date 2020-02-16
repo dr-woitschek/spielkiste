@@ -1,6 +1,6 @@
 # Modify-Registry
 
-## Meine New-ItemProperty-V2 Funktion
+## Meine Write-LogFile Funktion
 
 `Write-LogFile [<CommonParameters>]`
 
@@ -65,7 +65,7 @@
         Platzhalterzeichen akzeptieren?false
 
     -Append [<SwitchParameter>]
-        Meldungstexte an vorhandene Datei anhängen oder überschreiben
+        Meldungstexte an vorhandene Datei anhängen
         
         Erforderlich?                false
         Position?                    7

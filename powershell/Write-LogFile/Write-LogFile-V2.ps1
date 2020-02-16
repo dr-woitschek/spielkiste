@@ -67,15 +67,15 @@ function Write-LogFile
   .OUTPUTS
      Formatierten Text, evtl. mit Farbe
   .NOTES
-     Version:        0.2
+     Version:        0.3
      Creation Date:  16.02.2020
      Author:         Phillip und Robert
   .LINK
-     1. https://github.com/dr-woitschek/spielkiste/tree/master/powershell/
+     1. https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Write-LogFile
   #>
   #
   [CmdletBinding(SupportsShouldProcess = $True,
-                 HelpUri               = 'https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Modify-Registry',
+                 HelpUri               = 'https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Write-LogFile',
                  ConfirmImpact         = 'High')]
   Param(
    [Parameter(Mandatory         = $False,
@@ -123,7 +123,7 @@ function Write-LogFile
    [Parameter(Mandatory         = $False,
               ValueFromPipeline = $True,
               Position          = 6,
-              HelpMessage       = 'Meldungstexte an vorhandene Datei anhängen oder überschreiben, oder Get-Help <Funktion> -Example')]
+              HelpMessage       = 'Meldungstexte an vorhandene Datei anhängen, oder Get-Help <Funktion> -Example')]
    [Switch]$Append,
    #
    [Parameter(Mandatory         = $False,
@@ -132,13 +132,67 @@ function Write-LogFile
               HelpMessage       = '$TimeStampFormat definiert den Zeitstempel im Logfile, oder Get-Help <Funktion> -Example')]
    [ValidateNotNullOrEmpty()]
    [ValidateNotNull()]
-   [ValidateScript({ [DateTime]::Parse((Get-Date -Format $_)); try { $True; } catch { throw 'DU DEPP!!!'; $False; }; })]
+   [ValidateScript({ [DateTime]::Parse((Get-Date -Format $_)); try { $True; } catch { throw 'keine gültige Zeichenkette, z.B. HH:mm:ss.fff'; $False; }; })]
    [String]$TimeStampFormat
    #
   );
   #
   Begin
    {
+    #
+    if(!(Test-Path $Filepath))
+     {
+      #
+      try
+       {
+        #
+        New-Item $Filepath -ErrorAction Stop -Force | Out-Null;
+        #
+       }
+      catch
+       {
+        #
+        if($_.InvocationInfo.ScriptLineNumber)
+         {
+          #
+          [String]$ScriptLineNumber = $('[Line: '+$_.InvocationInfo.ScriptLineNumber+']');
+          #
+         };
+        #
+        if($_.CategoryInfo.Category)
+         {
+          #
+          [String]$Category = $(' '+$_.CategoryInfo.Category);
+          #
+         };
+        #
+        if($_.Exception.Message)
+         {
+          #
+          [String]$Message = $("`n"+' - Message: '+$_.Exception.Message);
+          #
+         };
+        #
+        if($_.TargetObject)
+         {
+          #
+          [String]$TargetObject = $("`n"+' - TargetObject: '+$_.TargetObject);
+          #
+         };
+        #
+        Write-Host -ForegroundColor Red -Object $($ScriptLineNumber+$Category+$Message+$TargetObject+"`n");
+        #
+        Break;
+        #
+       }
+      finally
+       {
+        #
+        $Error.Clear();
+        #
+       };
+      #
+     };
     #
     if(!$Color)
      {
@@ -241,10 +295,50 @@ function Write-LogFile
     if($Filepath)
      {
       #
-      # yyyy-MM-dd_HH:mm:ss.fff
-      Out-File -FilePath $($Filepath) `
-               -InputObject $($(Get-Date -Format $TimeStampFormat)+' | '+$Indent_Object+$Prefix_Object+$Object) `
-               @AddOn;
+      try
+       {
+        #
+        Out-File -FilePath $($Filepath) `
+                 -InputObject $($(Get-Date -Format $TimeStampFormat)+' | '+$Indent_Object+$Prefix_Object+$Object) `
+                 @AddOn;
+        #
+       }
+      catch
+       {
+        #
+        if($_.InvocationInfo.ScriptLineNumber)
+         {
+          #
+          [String]$ScriptLineNumber = $('[Line: '+$_.InvocationInfo.ScriptLineNumber+']');
+          #
+         };
+        #
+        if($_.CategoryInfo.Category)
+         {
+          #
+          [String]$Category = $(' '+$_.CategoryInfo.Category);
+          #
+         };
+        #
+        if($_.Exception.Message)
+         {
+          #
+          [String]$Message = $("`n"+' - Message: '+$_.Exception.Message);
+          #
+         };
+        #
+        if($_.TargetObject)
+         {
+          #
+          [String]$TargetObject = $("`n"+' - TargetObject: '+$_.TargetObject);
+          #
+         };
+        #
+        Write-Host -ForegroundColor Red -Object $($ScriptLineNumber+$Category+$Message+$TargetObject+"`n");
+        #
+        Break;
+        #
+       };
       #
      };
     #
@@ -289,5 +383,13 @@ function Write-LogFile
   #
  };
 #
-Get-Help Write-LogFile -Full;
+# Get-Help Write-LogFile -Full;
+#
+Write-LogFile -Object $('Hallo Welt xD') `
+              -Indent 0 `
+              -Color Magenta `
+              -Prefix Star `
+              -Filepath C:\TEMP\1\test1.log `
+              -TimeStampFormat 'yyyy-MM-dd HH:mm:ss.fff' `
+              -Append;
 #
