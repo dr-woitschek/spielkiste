@@ -28,6 +28,11 @@ meine PowerShell Spielkiste xD
 
 ---
 
+### Write-LogFile
+> [Write-LogFile](https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Write-LogFile)
+
+---
+
 ### PowerShell Funktionen
 
 - CmdletBinding()
