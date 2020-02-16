@@ -383,13 +383,5 @@ function Write-LogFile
   #
  };
 #
-# Get-Help Write-LogFile -Full;
-#
-Write-LogFile -Object $('Hallo Welt xD') `
-              -Indent 0 `
-              -Color Magenta `
-              -Prefix Star `
-              -Filepath C:\TEMP\1\test1.log `
-              -TimeStampFormat 'yyyy-MM-dd HH:mm:ss.fff' `
-              -Append;
+Get-Help Write-LogFile -Full;
 #
