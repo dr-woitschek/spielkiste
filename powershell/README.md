@@ -6,6 +6,8 @@ meine PowerShell Spielkiste xD
 
 - CmdletBinding()
 - Param()
+- Variablen
+- Vergleichsoperatoren
 
 > [Hilfe](https://github.com/dr-woitschek/spielkiste/tree/master/powershell/Hilfe)
 
