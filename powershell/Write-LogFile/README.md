@@ -1,4 +1,4 @@
-# Modify-Registry
+# Write-LogFile
 
 ## Meine Write-LogFile Funktion
 
