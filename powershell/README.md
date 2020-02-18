@@ -4,9 +4,9 @@ meine PowerShell Spielkiste xD
 
 ### Debugging
 
-> [Debugging](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/)
-> [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-Set-PSDebug.md)
-> [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-DebugPreference.md)
+- [Debugging](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/)
+- [Set-PSDebug -Trace <int>](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-Set-PSDebug.md)
+- [$DebugPreference](https://github.com/dr-woitschek/spielkiste/blob/master/powershell/Debugging/debugging-DebugPreference.md)
 
 ---
 
