@@ -68,7 +68,7 @@ HelpMessage = 'Hilfe Text'
 ---
 ##### Legt fest, welche exakten Werte (Case insensitiv) ein Argument annehmen darf
 ```
-[ValidateSet('Vorgabe_A' , 'Vorgabe_A')]
+[ValidateSet('Vorgabe_A' , 'Vorgabe_B')]
 ```
 ---
 ##### Definiert ein Skriptblock zur Validierung des Argumentes. Es wird ein Fehler generiert, wenn das Ergebnis nicht $True ist oder wenn der Code einen Laufzeitfehler erzeugt. Die automatische Variable $_ steht für das übergebene Argument
