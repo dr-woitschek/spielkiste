@@ -118,7 +118,7 @@ function New-NetFirewallRuleFromJsonOrHT
        PolicyStoreSource     : PersistentStore
        PolicyStoreSourceType : Local
   .NOTES
-     Version:        0.1
+     Version:        0.2
      Creation Date:  18.02.2020
      Author:         Phillip und Robert
   .LINK
@@ -169,6 +169,7 @@ function New-NetFirewallRuleFromJsonOrHT
      {
       #
       $Import = 'Json';
+      #
      }
     elseif($HT)
      {
@@ -183,7 +184,7 @@ function New-NetFirewallRuleFromJsonOrHT
       #
      };
     #
-    # Hashtable mit den Optionen Debug, Verbose und Append erstellen
+    # Hashtable mit den Optionen Verbose und Whatif erstellen
     $AddOn = @{
                #
                Verbose = if($PSBoundParameters.Verbose -eq $True)
@@ -195,7 +196,7 @@ function New-NetFirewallRuleFromJsonOrHT
                            $False;
                           };
                #
-               Debug   = if($PSBoundParameters.Debug -eq $True)
+               Whatif  = if($PSBoundParameters.Whatif -eq $True)
                           {
                            $True;
                           }
@@ -222,15 +223,15 @@ function New-NetFirewallRuleFromJsonOrHT
     if($Remove)
      {
       #
-      Remove-NetFirewallRule -Group $Group -ErrorAction Continue;
+      Remove-NetFirewallRule -Group $Group -ErrorAction Continue @AddOn;
       #
      };
     #
     switch($Import)
      {
       #
-      'Json'      { Get-Content $Json -Raw -ErrorAction Stop |
-                     ConvertFrom-Json -ErrorAction Stop; };
+      'Json'      { Get-Content $Json -Raw -ErrorAction Stop @AddOn |
+                     ConvertFrom-Json -ErrorAction Stop @AddOn; };
       #
       'Hashtable' { $FW = $HT; };
       #
@@ -243,7 +244,15 @@ function New-NetFirewallRuleFromJsonOrHT
        try
         {
          #
-         New-NetFirewallRule -Group $Group @_ -ErrorAction Stop;
+         if($PSBoundParameters.Whatif)
+          {
+           #
+           Write-Host -Object $('Whatif Variablen:');
+           $_;
+           #
+          };
+         #
+         New-NetFirewallRule -Group $Group @_ -ErrorAction Stop @AddOn;
          #
         }
        catch
